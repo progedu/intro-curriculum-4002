@@ -6,7 +6,6 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
-
 router.param('title', (req, res, next, title) => {
   res.send(title);
   next();
