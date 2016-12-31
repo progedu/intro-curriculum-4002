@@ -6,12 +6,12 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
-router.param('id', (req, res, next, id) => {
-  res.send(id);
+router.param('title', (req, res, next, title) => {
+  res.send(title);
   next();
 });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:title', (req, res, next) => {
   res.end();
 });
 
