@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
-//パスのパラメーターに title という項目がを確認
+//パスのパラメーターに title という項目があるかを確認
 router.param('title', (req, res, next, title) => {
   res.send(title);
   next();
