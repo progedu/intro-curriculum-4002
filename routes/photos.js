@@ -2,8 +2,14 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  res.send('Some photos');
+router.param('piyo', (req, res, next, piyo) => {
+  res.send(piyo);
+  next();
+});
+
+router.get('/:piyo', (req, res, next) => {
+  console.log('get called');
+  res.end();
 });
 
 module.exports = router;
