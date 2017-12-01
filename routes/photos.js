@@ -6,4 +6,14 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
+router.param('title', (req, res, next, title) => {
+  title = title.replace(/</g,'&lt;').replace(/>/g, '&gt;');
+  res.send(title);
+  next();
+});
+
+router.get('/:title', (req, res, next) => {
+  res.end();
+});
+
 module.exports = router;
