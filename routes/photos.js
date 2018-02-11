@@ -5,5 +5,13 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
+// parameter 結果に影響を与える外から渡す値
+router.param('title', (req, res, next, title) => {
+  res.send(title);
+  next();
+});
 
+router.get('/:title', (req, res, next) => {
+  res.end();
+});
 module.exports = router;
