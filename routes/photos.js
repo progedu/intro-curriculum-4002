@@ -36,12 +36,12 @@ router.get('/', get_func);
  * @param {*} req 
  * @param {*} res 
  * @param {*} next 
- * @param {*} id 
+ * @param {*} title 
  * @param {*} name 
  */
-const param_func = function (req, res, next, id, name) {
+const param_func = function (req, res, next, title, name) {
     debugInfo('PARAM処理開始');
-    res.send(id);
+    res.send(title);
     debugInfo('PARAM内NEXT()');
     // 次のミドルウェアに処理を渡す
     // next()は単なるCB関数（仮引数）の名前であることに注意
@@ -75,7 +75,7 @@ const param_func = function (req, res, next, id, name) {
 // param()出る　→　おわり。
 //
 // かな？
-router.param('id', param_func);
+router.param('title', param_func);
 /**
  * パラメーターつきのGETリクエストが送られてきた時に
  * param()関数を経由して呼び出されるGET関数
@@ -88,7 +88,7 @@ const getId_func = function (req, res, next) {
     res.end();
     debugInfo('GET:ID処理完了');
 }
-router.get('/:id', getId_func);
+router.get('/:title', getId_func);
 
 module.exports = router;
 debugInfo('photosモジュール読み込み完了');
