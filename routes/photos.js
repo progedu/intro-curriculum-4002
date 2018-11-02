@@ -2,8 +2,13 @@
 const express = require('express');
 const router = express.Router();
 
+router.param('id', (req, res, next, id)=>{
+  res.send(id);
+  next();
+});
+
 router.get('/', (req, res, next) => {
-  res.send('Some photos');
+  res.end();
 });
 
 module.exports = router;
