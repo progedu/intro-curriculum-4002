@@ -17,8 +17,8 @@ router.get('/:id', (req, res, next) => {
 })
 
 //課題の提出とともに、XSS脆弱性の対策をしよう
-router.param('title', (req, res, next, title) => {
-  // ここで、変数 title の内容をもとに存在チェック
+router.param('id', (req, res, next, title) => {
+  // ここで、変数 id の内容をもとに存在チェック
 });
 
 module.exports = router;
