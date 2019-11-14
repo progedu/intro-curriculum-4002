@@ -1,15 +1,15 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var helmet = require('helmet');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let helmet = require('helmet');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var photosRouter = require('./routes/photos');
+let indexRouter = require('./routes/index');
+let usersRouter = require('./routes/users');
+let photosRouter = require('./routes/photos');
 
-var app = express();
+let app = express();
 app.use(helmet());
 
 // view engine setup
