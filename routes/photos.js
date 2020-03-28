@@ -10,5 +10,4 @@ router.get('/:title', (req, res,next) => {
   res.send(req.params.title);
 });
 
-
 module.exports = router;
