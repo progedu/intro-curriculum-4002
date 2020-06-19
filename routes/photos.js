@@ -6,8 +6,9 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
-router.get('/:title', (req, res, next) => {
-  res.send(req.params.title);
+router.get('/:id', (req, res, next) => {
+  res.send(req.params.id.toString());
+
 });
 
 module.exports = router;
