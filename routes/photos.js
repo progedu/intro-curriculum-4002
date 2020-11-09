@@ -2,8 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  res.send('Some photos');
+router.get('/:text', (req, res, next) => {
+  res.send(req.params.text);
 });
 
 module.exports = router;
