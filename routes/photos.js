@@ -2,8 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/:title', (req, res, next) => {
-  res.send(req.params.title);
+router.get('/:id', (req, res, next) => {
+  res.send(req.params.id);
 });
 
 module.exports = router;
