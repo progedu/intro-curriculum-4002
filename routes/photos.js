@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:title', (req, res, next) => {
-  const title = req.params.title;
+  res.send(req.params.title);
 });
 
 module.exports = router;
