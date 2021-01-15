@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:title', (req, res, next) => {
-  res.send(req.params.title.replace(/</g, '&lt;')); // javascriptの埋め込み対策
+  res.send(req.params.title.replace(/</g, '&lt;')); // タグを文字列にする
 
 });
 
