@@ -7,7 +7,8 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:title', (req, res, next) => {
-  res.send(req.params.title);
+  const title = req.params.title;
+  res.render('photos',{title : title});
 });
 
 module.exports = router;
