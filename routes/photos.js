@@ -13,7 +13,7 @@ router.get('/:title', (req, res, next) => {
 
 // 画像表示
 /*router.get('/:id', (req, res, next) => {
-  res.render('index', {image: req.params.id});
+  res.render('photos', {image: req.params.id});
 })*/
 
 module.exports = router;
