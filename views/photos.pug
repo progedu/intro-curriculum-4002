@@ -1,0 +1,6 @@
+extends layout 
+
+block content 
+  h1 何かimage 
+  - let url = `http://localhost:8000/images/${image}.jpg`
+  img(src=url)
