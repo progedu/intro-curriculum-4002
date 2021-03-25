@@ -6,4 +6,8 @@ router.get('/', (req, res, next) => {
   res.send('Some photos');
 });
 
+router.get('/:title', (req, res, next) => {//http://localhost:8000/photos/hogeにアクセスするとブラウザにhogeと表示される
+  res.send(req.params.title);
+});
+
 module.exports = router;
