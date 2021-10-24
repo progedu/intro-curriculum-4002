@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 var photosRouter = require('./routes/photos');
 
 var app = express();
-app.use(helmet());
+app.use(helmet());  // 標準的セキュリティ対策
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
